@@ -8,11 +8,12 @@
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <!-- Selenium Java Dependency -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.25.0</version>
     </dependency>
   </dependencies>
+
 </project>
