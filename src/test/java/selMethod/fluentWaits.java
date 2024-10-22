@@ -21,21 +21,21 @@ public class fluentWaits {
 		
 		//Fluentwaits. // declarition
 		Wait<WebDriver> mywait = new FluentWait<WebDriver>(driver)
-				.withTimeout(Duration.ofSeconds(30))
-				.pollingEvery(Duration.ofSeconds(5))
+				.withTimeout(Duration.ofSeconds(10))
+				.pollingEvery(Duration.ofSeconds(1))
 				.ignoring(NoSuchElementException.class); 
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window().maximize();
 		
 		//usage
-		   WebElement text = mywait.until(new Function<WebDriver, WebElement>() {
+		   WebElement textUsername = mywait.until(new Function<WebDriver, WebElement>() {
 		     public WebElement apply(WebDriver driver) {
 		       return driver.findElement(By.xpath("//input[@placeholder='Username']"));
 		     }
 		   });
 		   
-		   text.sendKeys("Admin");
+		   textUsername.sendKeys("Admin");
 	}
 
 }
