@@ -25,7 +25,7 @@ public class smallTest {
 			
 		for(int i=0;i<links.size();i++) {
 			
-			links.get(i).click();
+			System.out.println(links.get(i).getText());
 		}
 	
 			
